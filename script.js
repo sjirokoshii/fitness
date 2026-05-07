@@ -24,7 +24,7 @@ function showToast(message, type) {
 	// 🎨 style based on type
 	if (type === "underweight") {
 		toast.style.background = "linear-gradient(135deg, #aeb06a, #f8fc72)";
-		toastIcon.innerText = "👿";
+		toastIcon.innerText = "🧏‍♂️";
 	}
 	else if (type === "normal") {
 		toast.style.background = "linear-gradient(135deg, #00c9a7, #92fe9d)";
@@ -32,11 +32,7 @@ function showToast(message, type) {
 	}
 	else if (type === "overweight") {
 		toast.style.background = "linear-gradient(135deg, #e06060, #e63232)";
-		toastIcon.innerText = "⚡";
-	}
-	else {
-		toast.style.background = "linear-gradient(135deg, #ff4d4d, #ff7b7b)";
-		toastIcon.innerText = "🍪";
+		toastIcon.innerText = "👀";
 	}
 
 	// reset animation (important)
@@ -79,7 +75,7 @@ function calculateBMI() {
 	else if (bmi < 24.9) {
 		category = "Normal";
 		plan = "Great job! Maintain with balanced workouts.";
-		motivation = "You're doing amazing ✨ Keep it up!";
+		motivation = "You're doing amazing 🏆✨ Keep it up!";
 		progressBar.style.background = "#7cd988";
 	} 
 	else if (bmi < 29.9) {
