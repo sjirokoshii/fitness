@@ -109,7 +109,7 @@ select:focus {
 
 .toast {
   position: fixed;
-  top: 80%;
+  top: 5%;
   left: 50%;
   transform: translate(-50%);
   min-width: 20px;
