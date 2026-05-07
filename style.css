@@ -112,13 +112,13 @@ select:focus {
   top: 80%;
   left: 50%;
   transform: translate(-50%);
-  min-width: 260px;
-  padding: 15px 20px;
-  border-radius: 16px;
+  min-width: 20px;
+  padding: 5px 2px;
+  border-radius: 10px;
   color: black;
   opacity: 0;
   transition: all 0.4s ease;
-  z-index: 999;
+  z-index: 1;
 }
 
 /* visible state */
