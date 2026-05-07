@@ -24,7 +24,7 @@ function showToast(message, type) {
 	// 🎨 style based on type
 	if (type === "underweight") {
 		toast.style.background = "linear-gradient(135deg, #aeb06a, #f8fc72)";
-		toastIcon.innerText = "🧏‍♂️";
+		toastIcon.innerText = "🍿";
 	}
 	else if (type === "normal") {
 		toast.style.background = "linear-gradient(135deg, #00c9a7, #92fe9d)";
