@@ -55,7 +55,7 @@ input {
 button {
 	padding: 10px 15px;
 	border-radius: 10px;
-	border:none;
+	border: none;
 	background: #5da3b3;
 	color: white;
 	cursor: pointer;
@@ -135,7 +135,7 @@ select:focus {
 }
 
 #toastIcon {
-  font-size: 20px;
+  font-size: 40px;
 }
 
 /* timer bar */
