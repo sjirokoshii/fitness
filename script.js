@@ -21,7 +21,7 @@ function showToast(message, type) {
 
 	toastMsg.innerText = message;
 
-	// 🎨 style based on type
+	
 	if (type === "underweight") {
 		toast.style.background = "linear-gradient(135deg, #aeb06a, #f8fc72)";
 		toastIcon.innerText = "🍿";
@@ -35,7 +35,7 @@ function showToast(message, type) {
 		toastIcon.innerText = "👀";
 	}
 
-	// reset animation (important)
+	// reset animation
 	toast.classList.remove("show");
 	void toast.offsetWidth;
 
@@ -52,7 +52,7 @@ function calculateBMI() {
 
 	// validation
 	if (!height || !weight) {
-		alert("Please enter height and weight");
+		alert("Please enter height and weight!");
 		return;
 	}
 
@@ -68,7 +68,7 @@ function calculateBMI() {
 	// BMI categories + color
 	if (bmi < 18.5) {
 		category = "Underweight";
-		plan = "Increase calories and focus on strength training.";
+		plan = "Increase calories and focus on strength training. Focus on calorie deficit.";
 		motivation = "You got this 🍎🫡 Small progress is still progress.";
 		progressBar.style.background = "#ffc107";
 	} 
@@ -80,7 +80,7 @@ function calculateBMI() {
 	} 
 	else if (bmi < 29.9) {
 		category = "Overweight";
-		plan = "Add cardio and reduce calorie intake.";
+		plan = "Add cardio and reduce calorie intake. Increase protein and lift weights.";
 		motivation = "Stay consistent 💪🥬 Results will come!";
 		progressBar.style.background = "#f53a27";
 	} 
@@ -91,14 +91,6 @@ function calculateBMI() {
 		progressBar.style.background = "#ff4d4d";
 	}
 
-	// goal logic
-	if (selectedGoal === "lose") {
-		plan += " Focus on calorie deficit.";
-	}
-	else if (selectedGoal === "gain") {
-		plan += " Increase protein and lift weights.";
-	}
-
 	// progress bar
 	let percentage = Math.min((bmi / 40) * 100, 100);
 	progressBar.style.width = percentage + "%";
@@ -107,7 +99,6 @@ function calculateBMI() {
 	document.getElementById("result").innerText = `BMI: ${bmi} (${category})`;
 	document.getElementById("plan").innerText = plan;
 
-	// ✅ FIXED LINE
 	showToast(motivation, category.toLowerCase());
 
 	// animation
