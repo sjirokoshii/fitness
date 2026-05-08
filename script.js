@@ -34,6 +34,10 @@ function showToast(message, type) {
 		toast.style.background = "linear-gradient(135deg, #e06060, #e63232)";
 		toastIcon.innerText = "👀";
 	}
+	else if (type === "obese") {
+		toast.style.background = "linear-gradient(135deg, #6693fa, #3440c2)";
+		toastIcon.innerText = "⚠️";
+	}
 
 	// reset animation
 	toast.classList.remove("show");
@@ -87,7 +91,7 @@ function calculateBMI() {
 	else {
 		category = "Obese";
 		plan = "Start light workouts and control diet.";
-		motivation = "One step at a time 💪 You can do this!";
+		motivation = "Fall in love with taking care of yourself 🫶";
 		progressBar.style.background = "#ff4d4d";
 	}
 
